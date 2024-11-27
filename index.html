@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition with Red, Blue and Yellow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Ephesis&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+
+        /* 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E */
+    
+    .main-box-1{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    .container-2{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        order: 1;
+        text-align: center;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+   
+
+    .grid-container{
+        background-color: #000;
+        display: grid;
+        grid-template-columns: 20% 68% 8%;
+        grid-template-rows: 40% 38% 8% 8%;
+        gap: 2%;
+        height: 98vh;
+        width: 100vh;
+    }
+
+    .one{
+        background-color: #F0F1EC;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border-bottom: 20px solid #000;
+
+    }
+
+    .two{
+        background-color: #E72F24;
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .three{
+        background-color: #F0F1EC;
+    }
+
+    .four{
+        background-color: #004592;
+        grid-row: span 2;
+    }
+
+    .five{
+        background-color: #F0F1EC;
+        grid-row: span 2;
+    }
+
+    .six{
+        background-color: #F0F1EC;
+        border-bottom: 10px solid #000;
+
+    }
+
+    .seven{
+        background-color: #F9D01E;
+    }
+    
+    @media (max-width:900px){
+        .main-box-1{
+            flex-direction: column-reverse;
+        }
+
+        .grid-container{
+            align-self: center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="main-box-1">
+        <div class="grid-container">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+            <div class="box seven"></div>
+        </div>
+        <div class="container-2">
+            <h1>Piet Mondrian</h1>
+            <h2>Composition with Red, Blue and Yellow</h2>
+            <p> Using HTML & CSS</p>
+        </div>
+    </div>
+</body>
+</html>
